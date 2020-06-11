@@ -14,8 +14,8 @@ algorithms.
 
 <table>
   <tr>
-    <td><img src="./assets/acrobot_passive.gif" width="200px" style="border:5px solid black" /></td>
-    <td><img src="./assets/pendulum_passive.gif" width="200px" style="border:5px solid black" /></td>
+    <td style="padding:0 15px;"><img src="./assets/acrobot_passive.gif" width="200px" style="border:5px solid black" /></td>
+    <td style="padding:0 15px;"><img src="./assets/pendulum_passive.gif" width="200px" style="border:5px solid black" /></td>
   </tr>
 </table>
 
