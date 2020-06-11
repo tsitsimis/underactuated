@@ -41,7 +41,9 @@ the feedback control
 
 makes the system equivalent to <img src="https://render.githubusercontent.com/render/math?math=\ddot{q} = v"> allowing 
 us to plug-in a simple PD controller with pole placement and transition the system
+to the desired state. 
 
+Swing-up control for pendulum and acrobot:
 
 <table>
   <tr>
