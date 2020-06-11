@@ -13,8 +13,8 @@ algorithms.
 #### Rigid-Body Dynamical Systems
 
 <p float="left">
-<img src="./assets/acrobot_passive.gif" width="200px" style="border:5px solid black" />
-<img src="./assets/pendulum_passive.gif" width="200px" style="border:5px solid black" />
+<kbd><img src="./assets/acrobot_passive.gif" width="200px" style="border:5px solid black" /></kbd>
+<kbd><img src="./assets/pendulum_passive.gif" width="200px" style="border:5px solid black" /></kbd>
 </p>
 
 #### Feedback Linearization
