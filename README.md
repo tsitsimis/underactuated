@@ -12,6 +12,11 @@ algorithms.
 
 #### Rigid-Body Dynamical Systems
 
+For benchmarking and simulation purposes, some well-known 
+low-dimensional systems (frequently used in the literature) are
+implemented. Both fully-actuated and underactuated versions
+are tested.
+
 <table>
   <tr>
     <td><img src="./assets/acrobot_passive.gif" width="200px" /></td>
@@ -20,5 +25,12 @@ algorithms.
   </tr>
 </table>
 
-
 #### Feedback Linearization
+
+Fully-actuated control becomes trivial when using feedback linearization
+by cancelling-out the complex dynamics of the system and converting it
+to a trivial linear system (feedback equivalent).
+
+For a second-order control-affine system
+
+<img src="https://render.githubusercontent.com/render/math?math=\ddot{q} = f_1(q, \dot{q})+f_2(q, \dot{q})u">
