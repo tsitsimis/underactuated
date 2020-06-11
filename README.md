@@ -33,4 +33,12 @@ to a trivial linear system (feedback equivalent).
 
 For a second-order control-affine system
 
-<img src="https://render.githubusercontent.com/render/math?math=\ddot{q} = f_1(q, \dot{q})+f_2(q, \dot{q})u">
+<img src="https://render.githubusercontent.com/render/math?math=\ddot{q} = f_1(q, \dot{q}) %2B f_2(q, \dot{q})u">  
+
+the feedback control 
+
+<img src="https://render.githubusercontent.com/render/math?math=u = f_2^{-1}(q, \dot{q})(v - f_1(q, \dot{q})">
+
+makes the system equivalent to <img src="https://render.githubusercontent.com/render/math?math=\ddot{q} = v"> allowing 
+us to plug-in a simple PD controller with pole placement and transition the system
+to the desired state.
