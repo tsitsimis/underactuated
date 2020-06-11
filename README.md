@@ -12,10 +12,10 @@ algorithms.
 
 #### Rigid-Body Dynamical Systems
 
-<table>
+<table border="1">
   <tr>
     <td><img src="./assets/acrobot_passive.gif" width="200px" /></td>
-    <td style='border:none;'></td>
+    <td style="border:none;"></td>
     <td><img src="./assets/pendulum_passive.gif" width="200px" /></td>
   </tr>
 </table>
