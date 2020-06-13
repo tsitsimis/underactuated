@@ -71,13 +71,13 @@ class Pendulum:
         self.x = sol.y[:, -1]
         self.t += self.dt
 
-    def playback(self, fig, ax, T, dt=0.1, save=False, show_time=True):
+    def playback(self, fig, ax, T, save=False, show_time=True):
         """
         Simulates the system until time T and animates it in
         a matplotlib figure
         """
 
-        time_steps = np.arange(0, T, dt)
+        time_steps = np.arange(0, T, self.dt)
         n = time_steps.shape[0]
         states_cache = np.zeros((n, 2))
         for i, t in enumerate(time_steps):
@@ -90,7 +90,7 @@ class Pendulum:
         plt.axis("off")
         ax.axis("equal")
         ax.set_xlim(-2 * self.length, 2 * self.length)
-        ax.set_ylim(-1.1 * self.length, 0.5)
+        ax.set_ylim(-1.1 * self.length, 1.1 * self.length)
 
         ax.scatter([0], [0], marker="o", c="b")
         ax.plot([-self.length / 2, self.length / 2], [0, 0], c="k", linestyle="--")
@@ -108,7 +108,7 @@ class Pendulum:
 
             if show_time:
                 time_text.set_text(f"t={np.round(t, 1)}")
-            plt.pause(dt)
+            plt.pause(self.dt)
 
             if save:
                 image = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8')
