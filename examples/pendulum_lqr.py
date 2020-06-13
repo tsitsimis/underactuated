@@ -17,5 +17,5 @@ plant.u = lambda t, x: lqr.controller(t, x - x_goal)
 
 # Animate
 fig, ax = plt.subplots(figsize=(5, 5))
-plant.playback(fig=fig, ax=ax, T=60)
+plant.playback(fig=fig, ax=ax, T=4, save=True)
 

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 
 # Plant
-plant = Acrobot(m1=1, m2=1, l1=1, l2=1, gravity=10, x0=np.array([np.pi/4, 0, 0, 0]))
+plant = Acrobot(m1=1, m2=1, l1=1, l2=1, gravity=10, x0=np.array([np.pi*3/4, 0, 0, 0]))
 
 # Linearize around fixed point (vertical position, zero velocity)
 x_goal = np.array([np.pi, 0, 0, 0])
@@ -19,5 +19,5 @@ plant.u = lambda t, x: lqr.controller(t, x - x_goal)
 
 # Animate
 fig, ax = plt.subplots(figsize=(5, 5))
-plant.playback(fig=fig, ax=ax, T=20)
+plant.playback(fig=fig, ax=ax, T=4, save=True)
 
