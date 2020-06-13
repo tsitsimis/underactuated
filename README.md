@@ -18,6 +18,11 @@ implemented. Both fully-actuated and underactuated versions
 are tested.
 
 <table>
+  <th>Acrobot</th>
+  <th></th>
+  <th>Simple Pendulum</th>
+  <th></th>
+  <th>Cart-Pole</th>
   <tr>
     <td><img src="./assets/acrobot_passive.gif" width="200px" /></td>
     <td></td>
