@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 
 # Plant
-plant = Acrobot(m1=1, m2=1, l1=1, l2=1, gravity=10, x0=np.array([np.pi*3/4, 0, 0, 0]))
+plant = Acrobot(m1=1, m2=1, l1=1, l2=1, gravity=10, x0=np.array([np.pi*3/4, 0, 0, 0]), underactuated=False)
 
 # Linearize around fixed point (vertical position, zero velocity)
 x_goal = np.array([np.pi, 0, 0, 0])
