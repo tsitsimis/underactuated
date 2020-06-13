@@ -17,7 +17,7 @@ class Acrobot:
     should be zero.
     """
 
-    def __init__(self, m1, m2, l1, l2, gravity, x0, u=lambda t, x: np.array([[0], [0]])):
+    def __init__(self, m1: float, m2: float, l1: float, l2: float, gravity: float, x0: np.ndarray, u=lambda t, x: np.array([[0], [0]])):
         self.m1 = m1
         self.m2 = m2
         self.l1 = l1
@@ -34,7 +34,7 @@ class Acrobot:
         self.t = 0
         self.dt = 0.01
 
-    def get_manipulator_matrices(self, x):
+    def get_manipulator_matrices(self, x: np.ndarray):
         """
         Calculates the manipulator matrices M, C, tau_g and B
         Also returns the inverse of M
@@ -69,7 +69,7 @@ class Acrobot:
 
         return M, M_inv, C, tau_g, B
 
-    def dynamics(self, t, x):
+    def dynamics(self, t: float, x: np.ndarray):
         """
         Implements the system's differential equations and returns
         state derivatives given current time and state

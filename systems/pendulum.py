@@ -15,7 +15,7 @@ class Pendulum:
     and state.
     """
 
-    def __init__(self, mass, length, friction, gravity, x0, u=lambda t, x: 0):
+    def __init__(self, mass: float, length: float, friction: float, gravity: float, x0: np.ndarray, u=lambda t, x: 0):
         self.mass = mass
         self.length = length
         self.friction = friction
