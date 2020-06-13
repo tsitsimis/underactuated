@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Plant
-plant = Acrobot(m1=1, m2=1, l1=1, l2=1, gravity=10, x0=np.array([np.pi/4, np.pi/4, 0, 0]))
+plant = Acrobot(m1=1, m2=1, l1=1, l2=1, gravity=10, x0=np.array([np.pi/4, np.pi/4, 0, 0]), underactuated=False)
 
 # Feedback Linearization Controller
 # Make system feedback-equivalent to a linear system

@@ -17,12 +17,20 @@ class Acrobot:
     should be zero.
     """
 
-    def __init__(self, m1: float, m2: float, l1: float, l2: float, gravity: float, x0: np.ndarray, u=lambda t, x: np.array([[0], [0]])):
+    def __init__(self, m1: float, m2: float, l1: float, l2: float, gravity: float, x0: np.ndarray, u=None,
+                 underactuated=True):
         self.m1 = m1
         self.m2 = m2
         self.l1 = l1
         self.l2 = l2
         self.gravity = gravity
+        self.underactuated = underactuated
+
+        if u is None:
+            if underactuated:
+                u = lambda t, x: np.array([[0]])
+            else:
+                u = lambda t, x: np.array([[0], [0]])
         self.u = u
 
         self.lc1 = l1 / 2
@@ -65,7 +73,13 @@ class Acrobot:
             [-m2 * g * lc2 * np.sin(q1 + q2)]
         ])
 
-        B = np.eye(2)
+        if self.underactuated:
+            B = np.array([
+                [0],
+                [1]
+            ])
+        else:
+            B = np.eye(2)
 
         return M, M_inv, C, tau_g, B
 
