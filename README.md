@@ -10,7 +10,7 @@ algorithms.
 
 ## Implementations
 
-#### Rigid-Body Dynamical Systems
+### Rigid-Body Dynamical Systems
 
 For benchmarking and simulation purposes, some well-known 
 low-dimensional systems (frequently used in the literature) are
@@ -25,7 +25,7 @@ are tested.
   </tr>
 </table>
 
-#### Feedback Linearization
+### Feedback Linearization
 
 Fully-actuated control becomes trivial when using feedback linearization
 by cancelling-out the complex dynamics of the system and converting it
@@ -53,7 +53,7 @@ Swing-up control for pendulum and acrobot:
   </tr>
 </table>
 
-#### Stabilization with Linearized Dynamics
+### Stabilization with Linearized Dynamics
 
 <table>
   <tr>
