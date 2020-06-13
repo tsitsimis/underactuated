@@ -29,7 +29,7 @@ are tested.
 
 Fully-actuated control becomes trivial when using feedback linearization
 by cancelling-out the complex dynamics of the system and converting it
-to a trivial linear system (feedback equivalent).
+to a linear system (feedback equivalent).
 
 For a second-order control-affine system
 
@@ -50,5 +50,15 @@ Swing-up control for pendulum and acrobot:
     <td><img src="./assets/acrobot_swingup.gif" width="200px" /></td>
     <td></td>
     <td><img src="./assets/pendulum_swingup.gif" width="200px" /></td>
+  </tr>
+</table>
+
+#### Stabilization with Linearized Dynamics
+
+<table>
+  <tr>
+    <td><img src="./assets/acrobot_lqr_stabilization.gif" width="200px" /></td>
+    <td></td>
+    <td><img src="./assets/pendulum_lqr_stabilization.gif" width="200px" /></td>
   </tr>
 </table>
