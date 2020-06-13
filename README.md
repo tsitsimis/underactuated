@@ -59,6 +59,14 @@ Swing-up control for pendulum and acrobot:
 
 ### LQR Stabilization with Linearized Dynamics
 
+Stabilize a non-linear system around a fixed point by applying a Linear Quadratic Regulator (LQR)
+on a linearized version of the system.  
+
+LQR is a feedback controller derived from Dynamic Programming for linear systems and quadratic cost
+on state and control signal.  
+
+<img src="https://render.githubusercontent.com/render/math?math=u = -Kx = -R^{-1}B^{T}Sx">
+
 <table>
   <tr>
     <td><img src="./assets/acrobot_lqr_stabilization.gif" width="200px" /></td>
