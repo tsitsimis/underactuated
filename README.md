@@ -22,6 +22,8 @@ are tested.
     <td><img src="./assets/acrobot_passive.gif" width="200px" /></td>
     <td></td>
     <td><img src="./assets/pendulum_passive.gif" width="200px" /></td>
+    <td></td>
+    <td><img src="./assets/cartpole_passive.gif" width="200px" /></td>
   </tr>
 </table>
 
@@ -47,18 +49,22 @@ Swing-up control for pendulum and acrobot:
 
 <table>
   <tr>
-    <td><img src="./assets/acrobot_swingup.gif" width="200px" /></td>
+    <td><img src="./assets/acrobot_feedback_linearization.gif" width="200px" /></td>
     <td></td>
-    <td><img src="./assets/pendulum_swingup.gif" width="200px" /></td>
+    <td><img src="./assets/pendulum_feedback_linearization.gif" width="200px" /></td>
+    <td></td>
+    <td><img src="./assets/cartpole_feedback_linearization.gif" width="200px" /></td>
   </tr>
 </table>
 
-### Stabilization with Linearized Dynamics
+### LQR Stabilization with Linearized Dynamics
 
 <table>
   <tr>
     <td><img src="./assets/acrobot_lqr_stabilization.gif" width="200px" /></td>
     <td></td>
     <td><img src="./assets/pendulum_lqr_stabilization.gif" width="200px" /></td>
+    <td></td>
+    <td><img src="./assets/cartpole_lqr_stabilization.gif" width="200px" /></td>
   </tr>
 </table>
