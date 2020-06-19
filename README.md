@@ -30,6 +30,11 @@ are tested.
     <td></td>
     <td><img src="./assets/cartpole_passive.gif" width="200px" /></td>
   </tr>
+  
+  <th>Rimless Wheel</th>
+  <tr>
+    <td><img src="./assets/rimlesswheel_passive.gif" width="200px" /></td>
+  </tr>
 </table>
 
 ### Feedback Linearization
