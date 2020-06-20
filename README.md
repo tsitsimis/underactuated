@@ -100,7 +100,10 @@ on state and control signal.
 <img src="./assets/rimlesswheel_passive.gif" width="300px" />
 
 The simplest model of legged robot. Assumes there will always 
-be a swing leg in position at the time of collision.
+be a swing leg in position at the time of collision. It uses pendula
+for legs and moves only thanks to the gravity. With appropriate 
+initial leg angle and angular velocity the wheel reaches periodic
+stability (limit cycle) and walks down the slope.
 
 The foot standing on the ground is modeled with a simple pendulum (`systems/pendulum.py`)
 with initial angle near the upward position. Using the simple
