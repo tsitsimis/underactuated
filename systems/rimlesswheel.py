@@ -144,11 +144,11 @@ class RimlessWheel:
         plt.ion()
         plt.axis("off")
         ax.axis("equal")
-        ax.set_xlim(-8 * self.length, 8 * self.length)
-        ax.set_ylim(-8 * self.length, 8 * self.length)
+        ax.set_xlim(-5 * self.length, 5 * self.length)
+        ax.set_ylim(-5 * self.length, 5 * self.length)
 
         p, = ax.plot([], [], c="k")  # pendulum (leg in motion)
-        p_c = ax.scatter([], [], c="k")  # mass
+        p_c = ax.scatter([], [], c="k", s=100)  # mass
         p_legs = [ax.plot([], [], c="k")[0] for _ in range(self.n_legs)]  # rest of the legs
 
         plt.show()
@@ -178,8 +178,8 @@ class RimlessWheel:
                     p_legs[leg_i].set_data([cm[0], cm[0] + self.length*direction[0]],
                                            [cm[1], cm[1] + self.length*direction[1]])
 
-                    ax.set_xlim(cm[0] - 8 * self.length, cm[0] + 8 * self.length)
-                    ax.set_ylim(cm[1] - 8 * self.length, cm[1] + 8 * self.length)
+                    ax.set_xlim(cm[0] - 5 * self.length, cm[0] + 5 * self.length)
+                    ax.set_ylim(cm[1] - 5 * self.length, cm[1] + 5 * self.length)
 
                 fig.canvas.draw()
                 plt.pause(self.leg.dt)
