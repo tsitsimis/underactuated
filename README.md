@@ -10,7 +10,7 @@ algorithms.
 
 ## Implementations
 
-### Rigid-Body Dynamical Systems
+## Rigid-Body Dynamical Systems
 
 For benchmarking and simulation purposes, some well-known 
 low-dimensional systems (frequently used in the literature) are
@@ -37,7 +37,8 @@ are tested.
   </tr>
 </table>
 
-### Feedback Linearization
+## Fully-actuated Systems
+#### Feedback Linearization
 
 Fully-actuated control becomes trivial when using feedback linearization
 by cancelling-out the complex dynamics of the system and converting it
@@ -67,7 +68,7 @@ Swing-up control for pendulum and acrobot:
   </tr>
 </table>
 
-### LQR Stabilization with Linearized Dynamics
+#### LQR Stabilization with Linearized Dynamics
 
 Stabilize a non-linear system around a fixed point by applying a Linear Quadratic Regulator (LQR)
 on a linearized version of the system. The system's initial state needs to be in the region of 
@@ -87,3 +88,23 @@ on state and control signal.
     <td><img src="./assets/cartpole_lqr_stabilization.gif" width="200px" /></td>
   </tr>
 </table>
+
+## Underactuated systems
+#### Energy Shaping
+*TODO*
+
+## Walking systems
+
+#### Rimless Wheel
+
+<img src="./assets/rimlesswheel_passive.gif" width="300px" />
+
+The simplest model of legged robot. Assumes there will always 
+be a swing leg in position at the time of collision.
+
+The foot standing on the ground is modeled with a simple pendulum (`systems/pendulum.py`)
+with initial angle near the upward position. Using the simple
+collision detection logic that the pendulum's angle (from the upward position)
+is <img src="https://render.githubusercontent.com/render/math?math=\theta = \alpha %2B \gamma">
+the pendulum's position is changed during the simulation and is
+placed in the position of next leg to hit the ground.
