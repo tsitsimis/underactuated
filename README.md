@@ -1,7 +1,7 @@
 # Underactuated Robotics
 
-Python implementations of Optimal Control, Optimization and Reinforcement Learning algorithms
-applied in underactuated robots and dynamical systems.
+Python implementations of Optimal Control and Optimization algorithms 
+for simulated underactuated systems and walking robots
 
 Inspired by the MIT's course [6.832 - Underactuated Robotics](http://underactuated.mit.edu/underactuated.html) 
 of [Russ Tedrake](http://groups.csail.mit.edu/locomotion/russt.html).
