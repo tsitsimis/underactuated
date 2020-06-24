@@ -96,7 +96,7 @@ class CartPole:
         self.x = sol.y[:, -1]
         self.t += self.dt
 
-    def playback(self, fig, ax, T, save=False, show_time=True):
+    def playback(self, fig, ax, T, save=False, show_time=True, callback=None):
         """
         Simulates the system until time T and animates it in
         a matplotlib figure
@@ -145,6 +145,10 @@ class CartPole:
 
             if show_time:
                 time_text.set_text(f"t={np.round(t, 1)}")
+
+            if callback is not None:
+                callback(ax, i, t, states_cache)
+
             fig.canvas.draw()
 
             plt.pause(self.dt)
