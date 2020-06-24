@@ -37,7 +37,7 @@ are tested.
   </tr>
 </table>
 
-## Fully-actuated Systems
+## Fully-actuated systems
 #### Feedback Linearization
 
 Fully-actuated control becomes trivial when using feedback linearization
