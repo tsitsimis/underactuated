@@ -25,6 +25,6 @@ class SystemLinearizer:
         self.A_lin = np.concatenate((A_lin_top, A_lin_bottom), axis=0)
 
         self.B_lin = np.concatenate((
-            np.zeros((n_half, n_half)),
+            np.zeros((n_half, B.shape[1])),
             M_inv.dot(B)
         ), axis=0)
