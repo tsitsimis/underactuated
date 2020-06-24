@@ -1,6 +1,6 @@
 # Underactuated Robotics
 
-Python implementations of Optimal Control and Optimization algorithms 
+Python implementations of Control and Optimization algorithms 
 for simulated underactuated systems and walking robots
 
 Inspired by the MIT's course [6.832 - Underactuated Robotics](http://underactuated.mit.edu/underactuated.html) 
@@ -68,6 +68,7 @@ Swing-up control for pendulum and acrobot:
   </tr>
 </table>
 
+## Underactuated systems
 #### LQR Stabilization with Linearized Dynamics
 
 Stabilize a non-linear system around a fixed point by applying a Linear Quadratic Regulator (LQR)
@@ -89,12 +90,10 @@ on state and control signal.
   </tr>
 </table>
 
-## Underactuated systems
 #### Energy Shaping
 *TODO*
 
 ## Walking systems
-
 #### Rimless Wheel
 
 <img src="./assets/rimlesswheel_passive.gif" width="300px" />
