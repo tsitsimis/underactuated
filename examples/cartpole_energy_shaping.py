@@ -23,8 +23,10 @@ def energy_shaping_controller(t, x):
 
     u_energy_shaping = k_e * theta_dot * np.cos(theta) * (E - E_d)
 
+    # Add extra terms to bring the cart in zero position
     u_desired = u_energy_shaping - k_p * d - k_d * d_dot
 
+    # Apply Partial Feedback Linearization (PFL)
     u = (m_c + m_p - m_p * np.cos(theta) ** 2) * u_desired - (
                 m_p * g * np.sin(theta) * np.cos(theta) + m_p * l * np.sin(theta) * theta_dot ** 2)
 
