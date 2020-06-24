@@ -45,5 +45,16 @@ plant.u = mixed_controller
 
 # Animate
 fig, ax = plt.subplots(figsize=(5, 5))
-plant.playback(fig=fig, ax=ax, T=20)
+controller_text = ax.text(x=-1.0*plant.length, y=1.2 * plant.length, s="", color="r", size=12)
+
+
+def animation_callback(ax, i, t, states_cache):
+    x = states_cache[i, :]
+    if np.linalg.norm(x - x_goal) > 0.1:
+        controller_text.set_text("Energy Shaping")
+    else:
+        controller_text.set_text("LQR")
+
+
+plant.playback(fig=fig, ax=ax, T=15, save=True, callback=animation_callback)
 
