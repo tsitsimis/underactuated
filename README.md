@@ -90,8 +90,35 @@ on state and control signal.
   </tr>
 </table>
 
-#### Energy Shaping
-*TODO*
+#### Energy Shaping with Partial Feedback Linearization (PFL)
+To apply LQR, we first have to bring the system near the fixed point.
+To achieve this, energy shaping controller pumps or draws energy from/to 
+the system until it reaches the energy of the desired state. This is
+usually done by calculating the error between the
+system's energy <img src="https://render.githubusercontent.com/render/math?math=E">
+and the desired energy <img src="https://render.githubusercontent.com/render/math?math=E^{d}">
+(that is <img src="https://render.githubusercontent.com/render/math?math=\tilde{E}=E-E^{d}">)
+and expressing its time derivative in the form
+
+<img src="https://render.githubusercontent.com/render/math?math=\dot{\tilde{E}} = \dot{E} = u \cdot h(x, \dot{x})">
+
+Then, the control signal
+<img src="https://render.githubusercontent.com/render/math?math=u = -k \cdot h(x, \dot{x}) \cdot \tilde{E}">
+guarantees that the energy error is non-increasing (since <img src="https://render.githubusercontent.com/render/math?math=\dot{\tilde{E}} = -k \cdot h^{2}(x, \dot{x}) \cdot \tilde{E}">).
+
+Theoretically, this should suffice but small perturbations (either physical
+or due to numerical errors) can move the system far from the goal state.
+
+In this situation, once the system is near the fixed point (inside its
+basin of attraction) the controller can switch from energy shaping to LQR
+and stabilize the system.
+
+<table>
+  <tr>
+    <td><img src="./assets/cartpole_energy_shaping.gif" width="200px" /></td>
+    <td></td>
+  </tr>
+</table>
 
 ## Walking systems
 #### Rimless Wheel
