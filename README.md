@@ -117,6 +117,8 @@ and stabilize the system.
   <tr>
     <td><img src="./assets/cartpole_energy_shaping.gif" width="200px" /></td>
     <td></td>
+    <td><img src="./assets/pendulum_energy_shaping.gif" width="200px" /></td>
+    <td></td>
   </tr>
 </table>
 
