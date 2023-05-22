@@ -1,6 +1,6 @@
 numpy==1.18.5
 matplotlib==3.2.1
-mpmath==1.1.0
+mpmath==1.3.0
 jupyter==1.0.0
 scipy==1.4.1
 imageio==2.8.0
